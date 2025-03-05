@@ -1,0 +1,46 @@
+.redes {
+  padding: 0.5rem;
+  top: 0;
+  position: sticky;
+  z-index: 5;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(236, 241, 247, 1) 25%,
+    rgba(255, 0, 0, 1) 62%
+  );
+  -webkit-box-shadow: 0px 14px 10px -3px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 14px 10px -3px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 14px 10px -3px rgba(0, 0, 0, 0.22);
+
+  
+
+  .panelSearch{
+    display: flex;
+
+    align-items: center;
+    border-radius: 50px;
+
+
+    input{
+      width: 100%;;
+      border-radius: 50px;
+      border: none;
+      z-index: 9;
+    }
+    svg{
+      color: white;
+    }
+    
+    p:first-of-type {
+      color: rgb(255, 255, 255);
+      font-weight: 800;
+    }
+  
+  }
+  
+  h3 {
+    color: white;
+  }
+}
