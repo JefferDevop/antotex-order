@@ -50,7 +50,7 @@ export function FooterApp() {
 
         <BtnLink
           link={
-            "https://antotex.catalogointeractivo.com.co/admin-dashboard/"
+            "https://antotex.soluciones.space/admin-dashboard/"
           }
           title={""}
           logo={<CiUser size={20} />}
