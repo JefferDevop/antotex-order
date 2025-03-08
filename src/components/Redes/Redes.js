@@ -45,7 +45,7 @@ export function Redes() {
         <div className={styles.panelSearch}>
           <BsSearch size={20} onClick={() => handleClick("/featured")} />
 
-          <input onClick={() => handleClick("/featured")} />
+          <input type="text" value="" readonly onClick={() => handleClick("/featured")} />
         </div>
       </div>
       {/* 

@@ -35,7 +35,7 @@ export function SearchTable() {
   }
 
   const filter = (filterTo) => {
-    var result = products.filter((item) => {
+    var result = products?.filter((item) => {
       if (
         (item.name_extend &&
           item.name_extend

@@ -87,9 +87,8 @@ export function ListPayment({ product, localAddress, authLoading }) {
         address,
         accesToken
       );
-      window.location.href = '/';
+      window.location.href = '/completed';
       deleteAllCart();
-      toast.success("El pedido se ha realizado con éxito");
     } catch (error) {
       console.error(error);
     }
@@ -210,7 +209,7 @@ export function ListPayment({ product, localAddress, authLoading }) {
     lastname: "Apellido",
     phone: "Teléfono",
     password: "Identificación",
-    email: "Correo Electrónico",
+    // email: "Correo Electrónico",
     city: "Ciudad",
     address: "Dirección",
     nota: "Nota",
@@ -283,7 +282,7 @@ export function ListPayment({ product, localAddress, authLoading }) {
               <p>Dirección: {selectedAddress.address}</p>
               <p>Ciudad: {selectedAddress.city}</p>
               <p>Teléfono: {selectedAddress.phone}</p>
-              <p>Correo: {selectedAddress.email}</p>
+              {/* <p>Correo: {selectedAddress.email}</p> */}
               {/* <Button outline onClick={toggleAddressModal}>Cambiar Dirección de Envío</Button> */}
 
               <Button outline onClick={() => toggleAddressModal()}>
@@ -293,8 +292,8 @@ export function ListPayment({ product, localAddress, authLoading }) {
           )}
         </div>
 
-        <Button block type="submit" color="secondary">
-          Pagar
+        <Button block type="submit" color="danger">
+          Enviar Pedido
         </Button>
       </Form>
 
@@ -374,7 +373,7 @@ const getInitialValues = (data) => ({
   phone: data?.phone || "",
   address: data?.address || "",
   city: data?.city || "",
-  email: data?.email || "",
+  email: data?.email || 'default@gmail.com',
   password: data?.password || "",
   nota: data?.nota || "",
 });

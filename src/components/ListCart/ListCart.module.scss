@@ -65,13 +65,14 @@
     object-position: center center;
   }
 
-
   .footButton{   
     button:first-of-type {
-      background-color: #faf8f3;
+      background-color: #ff0000; 
+      color: white;
       margin: 1rem 0;
       border: none;
     }
+
     button{
       margin: 1rem 0;
       color: black;

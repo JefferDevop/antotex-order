@@ -34,7 +34,7 @@ export function Search(props) {
           !product.soldout ? (
             <div key={index} className={styles.list__product}>
               <Link href={`/${product.slug}`}>
-                {product.images ? (
+                {product?.images ? (
                   <CardImg
                     alt="Card image cap"
                     src={
@@ -51,10 +51,10 @@ export function Search(props) {
                   <CardTitle className={styles.title}>
                     <p>{product.name_extend}</p>
 
-                    {product.price2 !== null && (
+                    {product?.price2 > 0 && (
                       <h6>$ {format(product.price2)}</h6>
                     )}
-                    {product.price1 !== null && (
+                    {product?.price1 > 0 && (
                       <h6>$ {format(product.price1)}</h6>
                     )}
 
