@@ -13,12 +13,16 @@ export function useGallery() {
       const response = await getGalleryProductByCode(data);
 
       if (Array.isArray(response)) {
-        const filteredResponse = response.filter(item => typeof item === 'object'); 
-        if (typeof data === 'object') {
+        const filteredResponse = response.filter(
+            item => (item.image !== null && item.image !== '') || (item.image_alterna !== null && item.image_alterna !== '')
+        );
+    
+        if (typeof data === 'object' && (data.image || data.image_alterna)) {
             setGallery([...filteredResponse, data]);
         } else {
             setGallery(filteredResponse);
         }
+    
         setLoading(false);
       } else {
         console.error("getGalleryByCode no devolvió un array");
