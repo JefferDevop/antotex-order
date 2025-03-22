@@ -10,15 +10,17 @@ export function useGallery() {
   const getGalleryByCode = async (data) => {
     try {
       setLoading(true);
-      const response = await getGalleryProductByCode(data.codigo);
+      const response = await getGalleryProductByCode(data);
 
       if (Array.isArray(response)) {
-        const updatedResult = [...response, data];
+        const filteredResponse = response.filter(item => typeof item === 'object'); 
+        if (typeof data === 'object') {
+            setGallery([...filteredResponse, data]);
+        } else {
+            setGallery(filteredResponse);
+        }
         setLoading(false);
-        setGallery(updatedResult);
-      
-        
-      } else {       
+      } else {
         console.error("getGalleryByCode no devolvió un array");
       }
     } catch (error) {

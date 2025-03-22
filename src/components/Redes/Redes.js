@@ -37,7 +37,7 @@ export function Redes() {
   return (
     <>
       <div className={styles.redes}>
-        <h5>CÁTALOGO 2025</h5>
+        <h5>CATÁLOGO 2025</h5>
         <h4>Ventas por Mayor</h4>
         <p>CARRERA 8 # 17 - 38 Centro de Cali</p>
         <p>Whatsapp: 311 3666417 </p>

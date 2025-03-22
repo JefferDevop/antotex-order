@@ -93,6 +93,11 @@ export function DetailProduct(props) {
     toggleModal();
   };
 
+  
+console.log('Galeria', gallery);
+
+
+
   const addDataToWhatsApp = () => {
     if (propductWhatsApp != "") {
       const whatsappLink = generateWhatsAppLink(
@@ -140,8 +145,6 @@ export function DetailProduct(props) {
                 <div className={styles.price}>
                   
                     <h5>Precio: $ {format(productData.price1)} </h5>
-                  
-                  
                 </div>
               </CardTitle>
 
