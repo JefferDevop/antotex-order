@@ -19,15 +19,11 @@ import styles from "./Available.module.scss";
 export function Available(props) {
   const { product } = props;
 
-
-  console.log('-**------', product);
-  
-
   const scale = "c_scale,f_auto,q_50,w_400/";
   const upload = "image/upload/";
 
   const format = (number) => {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); // Cambia 'es-ES' por tu configuración regional
+    return number?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); // Cambia 'es-ES' por tu configuración regional
   };
 
   const { addCart } = useCart();
@@ -78,9 +74,11 @@ export function Available(props) {
 
       <h5>{product.productData.name_extend}</h5>
       <div className={styles.product}>
-        <div className={styles.price}>
+        {product.productData.price1 > 0 && (
+          <div className={styles.price}>
             <label>Precio: $ {format(product.productData.price1)}</label>
-        </div>
+          </div>
+        )}
       </div>
 
       <Button
