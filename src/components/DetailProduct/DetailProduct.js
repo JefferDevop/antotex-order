@@ -93,10 +93,6 @@ export function DetailProduct(props) {
     toggleModal();
   };
 
-  
-console.log('Galeria', gallery);
-
-
 
   const addDataToWhatsApp = () => {
     if (propductWhatsApp != "") {

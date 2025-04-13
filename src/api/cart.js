@@ -20,7 +20,6 @@ export class Cart {
   }
 
   decrease(itemId) {
-    console.log(itemId);
     
     const products = this.getAll();
 

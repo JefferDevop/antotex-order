@@ -23,7 +23,6 @@ export default function CartPage() {
       try {
         const data = [];
         for await (const item of cart) {
-          console.log("item--", item);
 
           const response = await productCtrl.getProductById(item.id);
 

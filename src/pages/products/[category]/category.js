@@ -32,9 +32,6 @@ export default function CategoryPage() {
     return <NotFound title="Categoría no encontrada" />;
   }
 
-  console.log(products);
-
-
   return (
     <BasicLayout>
    <Redes/>

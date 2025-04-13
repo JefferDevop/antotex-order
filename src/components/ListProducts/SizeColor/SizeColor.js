@@ -124,8 +124,6 @@ export function SizeColor({ propductTC, getOffer, toggle }) {
     // Ejecutar la función `addData` para obtener el mensaje actualizado
     const messageAddCart = addData();
 
-    console.log("messageAddCart", messageAddCart);
-    
 
     // Verificar si el mensaje es válido antes de mostrar el toast
     if (messageAddCart && messageAddCart.success !== undefined) {

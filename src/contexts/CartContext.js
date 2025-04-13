@@ -75,9 +75,6 @@ export function CartProvider(props) {
     
     const result = cartCtrl.add(itemId, quantity, maxQuantity);
 
-    console.log("result", result);
-    
-
     refreshTotalCart();
     setLoading(false);
 

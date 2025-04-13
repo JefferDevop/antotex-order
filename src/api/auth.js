@@ -3,7 +3,8 @@ import { BASE_API } from "../config/constants";
 export class Auth {
     async login(formValue) {
 
-      console.log('formValue',formValue);
+      console.log("--/",formValue);
+      
       
         try {
           const url = `${BASE_API}/api/auth/login/`;
