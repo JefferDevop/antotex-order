@@ -40,7 +40,7 @@ export function Redes() {
         <h5>CATÁLOGO 2025</h5>
         <h4>Ventas por Mayor</h4>
         <p>CARRERA 8 # 17 - 38 Centro de Cali</p>
-        <p>Whatsapp: 311 3666417 </p>
+        <p>Whatsapp: 323 5549794 </p>
 
         <div className={styles.panelSearch}>
           <BsSearch size={20} onClick={() => handleClick("/featured")} />
